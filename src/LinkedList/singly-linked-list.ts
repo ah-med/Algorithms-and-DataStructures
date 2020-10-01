@@ -110,6 +110,52 @@ class SinglyLinkedList {
         }
         return false;
     }
+
+    remove(value: string | number) {
+        let previous = null;
+        let current = this.head;
+
+        // There are 3 use cases
+        // 1: Empty list - do nothing
+        // 2: Single node: (previous is null)
+        // 3: Many nodes
+        //    a: node to remove is the first node
+        //    b: node to remove is the middle or last
+
+        while (current != null) {
+            if (current.value === value) {
+                // it's a node in the middle or end
+                if (previous != null)
+                {
+                    // Case 3b
+
+                    // Before: Head -> 3 -> 5 -> null
+                    // After:  Head -> 3 ------> null
+                    previous.next = current.next;
+
+                    // it was the end - so update Tail
+                    if (current.next == null)
+                    {
+                        this._tail = previous;
+                    }
+
+                    this._count = this._count - 1;
+                }
+                else
+                {
+                    // Case 2 or 3a
+                    this.removeHead();
+                }
+
+                return true;
+            }
+
+            previous = current;
+            current = current.next;
+        }
+
+        return false;
+    }
 }
 
 // Exmaple
@@ -127,6 +173,12 @@ console.log('Adding tail node with value 5...');
 singlyLinkedList.addTail(5);
 console.log('Adding another tail node with value 7...');
 singlyLinkedList.addTail(7);
+console.log('Adding another tail node with value 9...');
+singlyLinkedList.addTail(9);
+console.log('Adding another tail node with value 11...');
+singlyLinkedList.addTail(11);
+console.log('Adding another tail node with value 13...');
+singlyLinkedList.addTail(13);
 console.table(singlyLinkedList);
 console.log("The new Head")
 console.log(singlyLinkedList.head);
@@ -141,7 +193,10 @@ console.log(singlyLinkedList.head);
 console.log("Removing Head node 1 new head should be 3")
 console.log(singlyLinkedList.removeHead());
 console.log(singlyLinkedList.head);
-console.log("Removing tail of value 7")
+console.log("Removing value 9 from the list")
+console.log(singlyLinkedList.remove(9));
+console.log(singlyLinkedList.contains(9));
+console.log("Removing tail of value 13")
 console.log(singlyLinkedList.removeTail());
 console.log("The new Tail")
 console.log(singlyLinkedList.tail);
