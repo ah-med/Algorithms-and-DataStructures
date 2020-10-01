@@ -1,5 +1,5 @@
 
-class DoublyLinkedListNode {
+export class DoublyLinkedListNode {
     value: string | number
     next: DoublyLinkedListNode | null
     prev: DoublyLinkedListNode | null
@@ -11,7 +11,7 @@ class DoublyLinkedListNode {
     }
 }
 
-class DoublyLinkedList {
+export class DoublyLinkedList {
     private _head: DoublyLinkedListNode | null = null;
     private _tail: DoublyLinkedListNode | null = null;
     private _count: number = 0; // number of items in the list
@@ -126,29 +126,29 @@ class DoublyLinkedList {
 }
 
 // Exmaple
-let doublyLinkedList = new DoublyLinkedList();
+// let doublyLinkedList = new DoublyLinkedList();
 
-console.log('New doubly linked list created')
-console.table(doublyLinkedList);
-console.log('Adding head node with value 3...');
-doublyLinkedList.addHead(3);
-console.table(doublyLinkedList);
-console.log('Adding another head node with value 1...');
-doublyLinkedList.addHead(1);
-console.log('Adding tail node with value 5...');
-doublyLinkedList.addTail(5);
-console.log('Adding another tail node with value 7...');
-doublyLinkedList.addTail(7);
-console.table(doublyLinkedList);
-console.log("The new Head")
-console.log(doublyLinkedList.head);
-console.log("The new Tail")
-console.log(doublyLinkedList.tail);
-console.log("Check if there is value 5 in the list");
-console.log(doublyLinkedList.contains(5));
-console.log("Check if there is value 500 in the list");
-console.log(doublyLinkedList.contains(500));
-console.log("Removing value 5 from the list");
-console.log(doublyLinkedList.remove(5));
-console.log("Check if there is value 5 in the list");
-console.log(doublyLinkedList.contains(5));
+// console.log('New doubly linked list created')
+// console.table(doublyLinkedList);
+// console.log('Adding head node with value 3...');
+// doublyLinkedList.addHead(3);
+// console.table(doublyLinkedList);
+// console.log('Adding another head node with value 1...');
+// doublyLinkedList.addHead(1);
+// console.log('Adding tail node with value 5...');
+// doublyLinkedList.addTail(5);
+// console.log('Adding another tail node with value 7...');
+// doublyLinkedList.addTail(7);
+// console.table(doublyLinkedList);
+// console.log("The new Head")
+// console.log(doublyLinkedList.head);
+// console.log("The new Tail")
+// console.log(doublyLinkedList.tail);
+// console.log("Check if there is value 5 in the list");
+// console.log(doublyLinkedList.contains(5));
+// console.log("Check if there is value 500 in the list");
+// console.log(doublyLinkedList.contains(500));
+// console.log("Removing value 5 from the list");
+// console.log(doublyLinkedList.remove(5));
+// console.log("Check if there is value 5 in the list");
+// console.log(doublyLinkedList.contains(5));

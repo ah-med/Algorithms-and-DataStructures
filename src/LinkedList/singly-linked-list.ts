@@ -1,6 +1,5 @@
-import { count } from "console";
 
-class SinglyLinkedListNode {
+export class SinglyLinkedListNode {
     value: string | number
     next: SinglyLinkedListNode | null
 
@@ -10,7 +9,7 @@ class SinglyLinkedListNode {
     }
 }
 
-class SinglyLinkedList {
+export class SinglyLinkedList {
     private _head: SinglyLinkedListNode | null = null;
     private _tail: SinglyLinkedListNode | null = null;
     private _count: number = 0; // number of items in the list
@@ -165,44 +164,44 @@ class SinglyLinkedList {
 }
 
 // Exmaple
-let singlyLinkedList = new SinglyLinkedList();
+// let singlyLinkedList = new SinglyLinkedList();
 
-console.log('New singly linked list created');
-console.table(singlyLinkedList);
-console.log('Adding head node with value 3...');
-singlyLinkedList.addHead(3);
-console.table(singlyLinkedList);
-console.log('Adding another head node with value 1...');
-singlyLinkedList.addHead(1);
-console.table(singlyLinkedList);
-console.log('Adding tail node with value 5...');
-singlyLinkedList.addTail(5);
-console.log('Adding another tail node with value 7...');
-singlyLinkedList.addTail(7);
-console.log('Adding another tail node with value 9...');
-singlyLinkedList.addTail(9);
-console.log('Adding another tail node with value 11...');
-singlyLinkedList.addTail(11);
-console.log('Adding another tail node with value 13...');
-singlyLinkedList.addTail(13);
-console.table(singlyLinkedList);
-console.log("The new Head")
-console.log(singlyLinkedList.head);
-console.log("The new Tail")
-console.log(singlyLinkedList.tail);
-console.log("Check if there is value 5 in the list");
-console.log(singlyLinkedList.contains(5));
-console.log("Check if there is value 500 in the list");
-console.log(singlyLinkedList.contains(500));
-console.log("Get the head node");
-console.log(singlyLinkedList.head);
-console.log("Removing Head node 1 new head should be 3")
-console.log(singlyLinkedList.removeHead());
-console.log(singlyLinkedList.head);
-console.log("Removing value 9 from the list")
-console.log(singlyLinkedList.remove(9));
-console.log(singlyLinkedList.contains(9));
-console.log("Removing tail of value 13")
-console.log(singlyLinkedList.removeTail());
-console.log("The new Tail")
-console.log(singlyLinkedList.tail);
+// console.log('New singly linked list created');
+// console.table(singlyLinkedList);
+// console.log('Adding head node with value 3...');
+// singlyLinkedList.addHead(3);
+// console.table(singlyLinkedList);
+// console.log('Adding another head node with value 1...');
+// singlyLinkedList.addHead(1);
+// console.table(singlyLinkedList);
+// console.log('Adding tail node with value 5...');
+// singlyLinkedList.addTail(5);
+// console.log('Adding another tail node with value 7...');
+// singlyLinkedList.addTail(7);
+// console.log('Adding another tail node with value 9...');
+// singlyLinkedList.addTail(9);
+// console.log('Adding another tail node with value 11...');
+// singlyLinkedList.addTail(11);
+// console.log('Adding another tail node with value 13...');
+// singlyLinkedList.addTail(13);
+// console.table(singlyLinkedList);
+// console.log("The new Head")
+// console.log(singlyLinkedList.head);
+// console.log("The new Tail")
+// console.log(singlyLinkedList.tail);
+// console.log("Check if there is value 5 in the list");
+// console.log(singlyLinkedList.contains(5));
+// console.log("Check if there is value 500 in the list");
+// console.log(singlyLinkedList.contains(500));
+// console.log("Get the head node");
+// console.log(singlyLinkedList.head);
+// console.log("Removing Head node 1 new head should be 3")
+// console.log(singlyLinkedList.removeHead());
+// console.log(singlyLinkedList.head);
+// console.log("Removing value 9 from the list")
+// console.log(singlyLinkedList.remove(9));
+// console.log(singlyLinkedList.contains(9));
+// console.log("Removing tail of value 13")
+// console.log(singlyLinkedList.removeTail());
+// console.log("The new Tail")
+// console.log(singlyLinkedList.tail);
