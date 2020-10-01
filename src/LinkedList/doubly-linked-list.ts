@@ -117,6 +117,12 @@ class DoublyLinkedList {
 
         return true;
     }
+
+    clear(): void {
+        this._head = null;
+        this._tail = null;
+        this._count = 0;
+    }
 }
 
 // Exmaple
