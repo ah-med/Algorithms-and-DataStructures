@@ -83,6 +83,33 @@ class SinglyLinkedList {
         }
         return false;
     }
+
+    removeTail(): boolean {
+        if (this._head != null)
+        {
+            if (this._count == 1)
+            {
+                this._head = null;
+                this._tail = null;
+            }
+            else
+            {
+                // Before: Head --> 3 --> 5 --> 7
+                //         Tail = 7
+                // After:  Head --> 3 --> 5 --> null
+                //         Tail = 5
+                let current: SinglyLinkedListNode | null =  this._head;
+                while (current?.next != this._tail) {
+                    if(current !=null) current = current.next;
+                }
+                if (current !=null) current.next = null;
+                this._tail = current;
+            }
+            this._count = this._count - 1;
+            return true;
+        }
+        return false;
+    }
 }
 
 // Exmaple
@@ -114,3 +141,7 @@ console.log(singlyLinkedList.head);
 console.log("Removing Head node 1 new head should be 3")
 console.log(singlyLinkedList.removeHead());
 console.log(singlyLinkedList.head);
+console.log("Removing tail of value 7")
+console.log(singlyLinkedList.removeTail());
+console.log("The new Tail")
+console.log(singlyLinkedList.tail);
