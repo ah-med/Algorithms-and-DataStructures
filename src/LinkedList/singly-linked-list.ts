@@ -55,6 +55,22 @@ class SinglyLinkedList {
             this.addHead(value);
         }
     }
+
+    contains(value: string | number): boolean {
+        // start from the head
+        let current: SinglyLinkedListNode | null = this._head;
+
+        while (current != null)
+        {
+            if (current.value === value)
+            {
+                return true;
+            }
+
+            current = current.next;
+        }
+        return false;
+    }
 }
 
 // Exmaple
@@ -77,3 +93,7 @@ console.log("The new Head")
 console.log(singlyLinkedList.head);
 console.log("The new Tail")
 console.log(singlyLinkedList.tail);
+console.log("Check if there is value 5 in the list");
+console.log(singlyLinkedList.contains(5));
+console.log("Check if there is value 500 in the list");
+console.log(singlyLinkedList.contains(500));

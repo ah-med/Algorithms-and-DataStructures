@@ -59,6 +59,22 @@ class DoublyLinkedList {
             this._count = this._count + 1; // increase count
         }
     }
+
+    contains(value: string | number): boolean {
+        // start from the head
+        let current: DoublyLinkedListNode | null = this._head;
+
+        while (current != null)
+        {
+            if (current.value === value)
+            {
+                return true;
+            }
+
+            current = current.next;
+        }
+        return false;
+    }
 }
 
 // Exmaple
@@ -80,4 +96,7 @@ console.log("The new Head")
 console.log(doublyLinkedList.head);
 console.log("The new Tail")
 console.log(doublyLinkedList.tail);
-
+console.log("Check if there is value 5 in the list");
+console.log(doublyLinkedList.contains(5));
+console.log("Check if there is value 500 in the list");
+console.log(doublyLinkedList.contains(500));
