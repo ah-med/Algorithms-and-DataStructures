@@ -35,12 +35,13 @@ There are three types of Linked Lists
 
 * Adding items to the head or tail of a linked list has O(1) complexity which means adding items in linked list is very fast.
 
-*
+* Memory is only allocated when needed at runtime hence no memory wastage.
 
 ## Cons
 
-* 
+* Though memory is allocated only when required, storing nodes in linked list requires more memory because each node contains pointers that takes memory too.
 
+* Tranversing in linked list can be hard, in order to access a node n we have to visit all node up to n hence time complexity is O(n).
 
 ## Singly Linked List
 
