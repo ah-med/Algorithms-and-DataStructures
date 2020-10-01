@@ -60,7 +60,7 @@ class DoublyLinkedList {
         }
     }
 
-    contains(value: string | number): boolean {
+    find(value: string | number): DoublyLinkedListNode | null {
         // start from the head
         let current: DoublyLinkedListNode | null = this._head;
 
@@ -68,12 +68,54 @@ class DoublyLinkedList {
         {
             if (current.value === value)
             {
-                return true;
+                return current;
             }
 
             current = current.next;
         }
-        return false;
+        return null;
+    }
+
+    contains(value: string | number): boolean {
+        return this.find(value) != null;
+    }
+
+    remove(value: string | number): boolean {
+        let found: DoublyLinkedListNode | null = this.find(value);
+
+        if (found == null) {
+            return false;
+        }
+
+        let previous: DoublyLinkedListNode | null = found.prev; // found's prev
+        let next: DoublyLinkedListNode | null = found.next; // found's next
+
+        if (previous == null) {
+            // we are removing the head node and making the next node the new head
+            this._head = next
+            if(this._head != null) {
+                this._head.prev = null;
+            }
+        } else {
+            // we are not removing the head node
+            // we are linking the next of found's prev to found's next
+            previous.next = next;
+        }
+
+        if(next == null) {
+            // we are removing the tail node and making the previous node the new tail
+            this._tail = previous
+            if(this._tail != null) {
+                this._tail.next = null;
+            }
+        } else {
+            // we are not removing the tail node
+            // we are linking the previous of found's next to found's prev
+            next.prev = previous;
+        }
+        this._count = this._count - 1;
+
+        return true;
     }
 }
 
@@ -100,3 +142,7 @@ console.log("Check if there is value 5 in the list");
 console.log(doublyLinkedList.contains(5));
 console.log("Check if there is value 500 in the list");
 console.log(doublyLinkedList.contains(500));
+console.log("Removing value 5 from the list");
+console.log(doublyLinkedList.remove(5));
+console.log("Check if there is value 5 in the list");
+console.log(doublyLinkedList.contains(5));
