@@ -71,6 +71,18 @@ class SinglyLinkedList {
         }
         return false;
     }
+
+    removeHead(): boolean {
+        if(this._head != null) {
+            this._head = this._head.next
+            this._count = this._count - 1;
+            if(this._count < 1) {
+                this._tail = this._head
+            }
+            return true;
+        }
+        return false;
+    }
 }
 
 // Exmaple
@@ -97,3 +109,8 @@ console.log("Check if there is value 5 in the list");
 console.log(singlyLinkedList.contains(5));
 console.log("Check if there is value 500 in the list");
 console.log(singlyLinkedList.contains(500));
+console.log("Get the head node");
+console.log(singlyLinkedList.head);
+console.log("Removing Head node 1 new head should be 3")
+console.log(singlyLinkedList.removeHead());
+console.log(singlyLinkedList.head);
