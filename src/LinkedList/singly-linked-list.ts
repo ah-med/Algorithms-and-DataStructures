@@ -22,6 +22,10 @@ export class SinglyLinkedList {
         return this._tail;
     }
 
+    get count(): number {
+        return this._count;
+    }
+
     addHead(value: string | number): void {
         let newNode = new SinglyLinkedListNode(value);
 
