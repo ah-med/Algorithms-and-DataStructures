@@ -1,4 +1,4 @@
-# Linked List
+# Linked List ⛓
 
 A Linked List is a chain of objects where each object contains a single value and a pointer to the next object in the list.
 
