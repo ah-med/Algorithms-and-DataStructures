@@ -118,6 +118,24 @@ export class DoublyLinkedList {
         return true;
     }
 
+    removeHead(): void {
+        if (this._head) {
+            this.remove(this._head.value);
+            return;
+        }
+
+        throw new Error('Head Node does not exist');
+    }
+
+    removeTail(): void {
+        if (this._tail) {
+            this.remove(this._tail.value);
+            return;
+        }
+
+        throw new Error('Tail Node does not exist');
+    }
+
     clear(): void {
         this._head = null;
         this._tail = null;

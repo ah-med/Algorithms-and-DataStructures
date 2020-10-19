@@ -183,6 +183,36 @@ describe('DoublyLinkedList remove method', () => {
     });
 })
 
+describe('DoublyLinkedList removeHead', () => {
+    const doublyLinkedList = new DoublyLinkedList()
+    doublyLinkedList.addHead(1);
+    doublyLinkedList.addTail(3);
+    doublyLinkedList.addTail(5);
+    doublyLinkedList.addTail(7);
+
+    it('should remove the head node', () => {
+        const head = doublyLinkedList.head;
+        doublyLinkedList.removeHead();
+
+        expect(doublyLinkedList.head).not.toBe(head);
+    });
+});
+
+describe('DoublyLinkedList removeTail', () => {
+    const doublyLinkedList = new DoublyLinkedList()
+    doublyLinkedList.addHead(1);
+    doublyLinkedList.addTail(3);
+    doublyLinkedList.addTail(5);
+    doublyLinkedList.addTail(7);
+
+    it('should remove the tail node', () => {
+        const tail = doublyLinkedList.tail;
+        doublyLinkedList.removeTail();
+
+        expect(doublyLinkedList.tail).not.toBe(tail);
+    });
+});
+
 describe('DoublyLinkedList clear', () => {
     const doublyLinkedList = new DoublyLinkedList()
     doublyLinkedList.addHead(1);
