@@ -4,7 +4,7 @@ export class Queue {
     private store = new Deque();
 
     enqueue(item: string | number): void {
-        this.store.enqueTail(item);
+        this.store.enqueueTail(item);
     }
 
     dequeue(): string | number {

@@ -5,7 +5,7 @@ export class Stack {
     private store = new Deque();
     
     push(item: string | number): void {
-        this.store.enqueHead(item);
+        this.store.enqueueHead(item);
     }
 
     pop(): string | number {

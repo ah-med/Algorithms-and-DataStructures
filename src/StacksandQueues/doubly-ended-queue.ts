@@ -3,7 +3,7 @@ import { DoublyLinkedList } from "../LinkedList";
 export class Deque {
     private store = new DoublyLinkedList();
 
-    enqueHead(val: string | number): void {
+    enqueueHead(val: string | number): void {
         this.store.addHead(val)
     }
 
@@ -24,7 +24,7 @@ export class Deque {
         throw new Error('Head does not exist');
     }
 
-    enqueTail(val: string | number): void {
+    enqueueTail(val: string | number): void {
         this.store.addTail(val);
     }
 
