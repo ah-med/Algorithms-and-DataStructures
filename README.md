@@ -10,3 +10,4 @@
     - <a href="./src/StacksandQueues/readme.md#queue-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F">Queue</a>
     - <a href="./src/StacksandQueues/readme.md#bonus---doubly-ended-queue-deque">Doubly Ended Queue</a>
 3. <a href="./src/BinarySearchTrees/readme.md">Binary Search Trees</a>
+4. <a href="./src/HashTables/readme.md">Hash Tables</a>
