@@ -11,3 +11,4 @@
     - <a href="./src/StacksandQueues/readme.md#bonus---doubly-ended-queue-deque">Doubly Ended Queue</a>
 3. <a href="./src/BinarySearchTrees/readme.md">Binary Search Trees</a>
 4. <a href="./src/HashTables/readme.md">Hash Tables</a>
+5. <a href="./src/SortingAlgorithms/readme.md">Sorting Algorithms</a>
